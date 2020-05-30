@@ -1,0 +1,7 @@
+﻿[#0]
+! Delete specific text "[ZOUK]" =
+T=2
+F=_ALL
+1=[ZOUK]
+2=
+3=0|0

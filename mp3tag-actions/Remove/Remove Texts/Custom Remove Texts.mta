@@ -1,0 +1,15 @@
+﻿[#0]
+! Delete basic web links
+T=4
+F=_ALL
+1=(https?:\\/\\/(www\\.)?|www\\.)?[a-zA-Z0-9][a-zA-Z0-9-]+\\.((?!mp3)[^\\s]{2,3}+)
+2=
+3=0
+
+[#1]
+! Delete specific text "[ZOUK]" =
+T=2
+F=_ALL
+1=[ZOUK]
+2=
+3=0|0

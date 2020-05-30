@@ -1,0 +1,17 @@
+www.google.com
+www.google.com .mp3
+www.google.com Esto es una prueba
+www.google.com.mp3
+www.google.es.mp3
+Www.google.com.mp3
+www.google.com Esto es una prueba
+https://regex101.com/
+http://regex101.com/
+http://www.regex101.com/
+
+Autor - Titulo.mp3
+Autor - Titulo www.google.com.mp3
+Autor - Titulo www.google.com .mp3
+Autor - Titulo google.com
+Autor - Titulo google.com.mp3
+Autor - Titulo google.com .mp3

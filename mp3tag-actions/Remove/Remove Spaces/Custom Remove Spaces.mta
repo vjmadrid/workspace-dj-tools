@@ -1,0 +1,22 @@
+﻿[#0]
+! Delete spaces at the START / END =
+! * NO delete spaces at the END FILENAME
+T=4
+F=_ALL
+1=(^\\s+|\\s+$)
+2=
+3=0
+
+[#1]
+! Convert two or more consecutive spaces to one =
+T=4
+F=_ALL
+1=\\s{2,}
+2= 
+3=0
+
+[#2]
+! Delete spaces at the START / END =
+T=5
+1=$trim(%_filename%)
+F=_FILENAME
