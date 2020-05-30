@@ -1,0 +1,7 @@
+[#0]
+! Convert two or more consecutive spaces to one
+T=4
+F=_ALL
+1=\\s{2,}
+2= 
+3=0

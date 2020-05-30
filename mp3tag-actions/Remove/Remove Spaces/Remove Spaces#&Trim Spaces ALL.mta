@@ -1,0 +1,8 @@
+[#0]
+! Delete spaces at the START / END =
+! * NO delete spaces at the END FILENAME
+T=4
+F=_ALL
+1=(^\\s+|\\s+$)
+2=
+3=0

@@ -1,0 +1,7 @@
+[#0]
+! Delete spaces at the END=
+T=4
+F=_TAG
+1=\\s+$
+2=
+3=0

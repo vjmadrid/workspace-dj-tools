@@ -1,0 +1,5 @@
+[#0]
+! Delete spaces at the START / END =
+T=5
+1=$trim(%_filename%)
+F=_FILENAME
