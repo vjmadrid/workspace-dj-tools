@@ -1,0 +1,15 @@
+﻿[#0]
+! Replaces errors in the value with the text Acapella =
+T=4
+F=_ALL
+1=(A|a)\\s?capp?ell?a
+2=Acapella
+3=0
+
+[#1]
+! Replaces values (rmx, remixes, ...) with the text Remix =
+T=4
+F=_ALL
+1=\\b(?:rmx|(?:re)?mix(?:ed|es|ing)?)\\b
+2=Remix
+3=0

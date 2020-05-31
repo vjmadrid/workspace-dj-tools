@@ -1,10 +1,11 @@
 # mp3tag-actions
 
-This project represents a collection of operations ("actions") de [Mp3tag](https://www.mp3tag.de/en) defined to help prepare / clean up the music
+This project represents a collection of operations ("actions") of [Mp3tag](https://www.mp3tag.de/en) defined to help prepare / clean up the music-
 
 This project stands out for:
 
 * Provides a **collection of independent pre-build mp3tag actions** to prepare/clean up the music
+* Provides a **collection of independent pre-build action groups** based on the scope
 
 
 
@@ -12,13 +13,24 @@ This project stands out for:
 
 ## What is preparing / cleaning music?
 
-It is the "personal" procedure that everyone has to organize their music collection and covers from getting the music, its edition at the information level (not contained), its classification and its storage within a persistence device (hard disk, portable hard disk, memory)
+> "Each way of classifying a thing is only one way of handling it for a certain particular purpose." William James
 
-This procedure takes into account different aspects such as the name used in our music files, the directory structure we use, the tags we have and the way we use them
+It is the **"personal" procedure** that many people apply to **organize/classify** their **music collection** according to **your needs**, allowing :
 
-It is therefore essential that everyone finds their way of working, although several best practices have been found to be very helpful
+* *To have a better order/classification when storing in a persistence device (hard disk, portable hard disk, memory, etc.)*
+* *To be much more efficient when we look for it inside the persistence device or from the use of some specialized application*
+* *To have useful and much more complete information when using it*
 
-Areas of best practices
+The **edition** will be applied at the level of **information** and **meta-information** of an mp3 file after obtaining it and just before saving it. Although it can be edited at any time, it should be taken into account whether it may have any consequences.
+
+Since **"there are as many ways of doing things as there are ways of drinking water"** it is essential that everyone finds the way they are most comfortable and the way that allows them to be more productive, no matter how rare or complex it may be.
+
+This procedure can vary significantly from person to person, so many of the **problems** that occur are **frequent** and **repeated** to everyone. Some **best practices** can be applied to solve these problems,
+
+
+### Areas of best practices
+
+There are some specific areas of application where action can be taken. Some areas can be :
 
 * **Eliminate Duplicates** : unique values in those elements that require it -> remove repeated items
 * **Parsing** : syntax analysis
@@ -40,25 +52,52 @@ Areas of best practices
 
 ## What is an mp3tag action?
 
-An [mp3tag action](https://help.mp3tag.de/options_format.html) is a feature of the program that makes it easy to apply pre-defined edits on the tags automatically 
+An [mp3tag action](https://help.mp3tag.de/options_format.html) is a feature of the program that makes it easy to apply pre-defined edits on the tags automatically.
 
-Each one the defined actions :
+As the concept of action can encompass different meanings, I found it interesting to establish a classification according to the complexity that an action may have to help understand this concept.
 
-* Should have a unique responsibility
-* Should implement one of the operations considered in the areas of best practices
-* Should apply to filenames and tags
-* Should be user-defined
-* Should have diferent types : Case conversion, convert codepage, Export, Format Value, ...
+ADD IMAGE
 
-The actions are grouped into groups 
 
-Each one the defined groups :
+### Action
 
-* Should be independent
-* Should apply one single action
-* Should allow for CRUD management
-* Should be user-defined
+Minimum work unit and responsible for performing a single task
 
+Features :
+
+* *Should have a single responsibility -> perform a clearly defined task*
+* *Should have a identifiable name*
+* *Should implement one of the operations considered in the area of best practices*
+* *Should apply to filenames and tags*
+* *Should be user-defined*
+* *Should have diferent types : Case conversion, convert codepage, Export, Format Value, ...*
+* *It can be independent or defined within a group*
+
+
+### Action Group
+
+Set composed of one or more actions which corresponds to the first grouping level
+
+It is provided by the application
+
+Features :
+
+* *Should have a single scope of application*
+* *Should have a identifiable name*
+* *Should be independent*
+* *Should be user-defined*
+
+
+### Procedure
+
+Set composed of one or more groups corresponding to extra grouping levels
+
+Features :
+
+* *Should have a higher level of scope*
+* *Should have a identifiable name*
+* *Should be independent*
+* *Should be user-defined*
 
 
 
@@ -83,9 +122,20 @@ Each one the defined groups :
 * [Mp3tag Scripting Funcions](https://help.mp3tag.de/main_scripting.html)
 * [Regular Expressions](https://en.wikipedia.org/wiki/Regular_expression) - Patterns for detecting expressions in texts
 
-[Regular Expressions Online Validator](https://regex101.com/)
 
 Note : Mp3tag provides 2 different syntaxes with different escape rules and logic
+
+
+### Useful resources
+
+[Regular Expressions Online Validator](https://regex101.com/)
+[Regular Expressions Online Visualizer](https://jex.im/regulex/)
+
+To work with the formats used, a conversion from "to" is required
+
+* "\\\\" is required by the mp3tag expression
+* "\\" is required by any of the validators
+
 
 
 

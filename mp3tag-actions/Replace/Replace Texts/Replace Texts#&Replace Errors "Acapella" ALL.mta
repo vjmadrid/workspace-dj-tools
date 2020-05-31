@@ -1,7 +1,0 @@
-﻿[#0]
-! Replace errors in the text "Acapella" =
-T=4
-F=_ALL
-1=\\b(A\\s?|a\\s?)capp?ell?a\\b
-2=Acapella
-3=0

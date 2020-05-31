@@ -1,0 +1,7 @@
+﻿[#0]
+! Replaces values (rmx, remixes, ...) with the text Remix =
+T=4
+F=_ALL
+1=\\b(?:rmx|(?:re)?mix(?:ed|es|ing)?)\\b
+2=Remix
+3=0
