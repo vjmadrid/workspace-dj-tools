@@ -1,0 +1,5 @@
+﻿[#0]
+! Generate Tag values (%artist% and %title%) using patther in the filename
+T=7
+F=%_filename%
+1=%artist% - %title%

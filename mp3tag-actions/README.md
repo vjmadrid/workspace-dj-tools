@@ -82,7 +82,7 @@ It is provided by the application
 
 Features :
 
-* *Should have a single scope of application*
+* *Should have a single scope of application (general or specific)*
 * *Should have a identifiable name*
 * *Should be independent*
 * *Should be user-defined*
@@ -94,7 +94,7 @@ Set composed of one or more groups corresponding to extra grouping levels
 
 Features :
 
-* *Should have a higher level of scope*
+* *Should have a higher level of scope (general or specific)*
 * *Should have a identifiable name*
 * *Should be independent*
 * *Should be user-defined*
@@ -255,52 +255,97 @@ For example
 That repository provides a pack of prebuild actions. You don't need to learn programming, just copypaste those actions into your program and user them on click.
 
 
-## .mta Structure
+## Structure ".mta" file
 
-Ejemplo de fichero de mte
+Example of a mta file : 
+
 ```bash
 [#0]
+! Replaces errors in the value with the text Acapella =
 T=4
 F=_ALL
-1=\\b(?:(?:re)?mix(?:ed|ing)?|rmx)\\b
-2=Remix
+1=(A|a)\\s?capp?ell?a
+2=Acapella
 3=0
 ```
 
-Detalle de la estructura del fichero
+### Detail of the file structure
 
-**T=<Action>**
+[#XXX] : Identifier and order indicator 
+T : Action Type
+F : Target of the action
 
-T=1 'Case conversion'
-T=2 'Replace'
-T=3 Not listed in action types
-T=4 'Regular expression'
-T=5 'Format value'
-T=6 'Remove duplicate fields'
-T=7 'Guess values'
-T=8 'Merge duplicate fields'
-T=9 'Remove fields'
-T=10 'Remove fields except'
-T=11 'Convert codepage'
-T=12 'Import cover from file'
-T=13 'Export cover to file'
-T=14 'Import text file'
-T=15 'Export'
-T=16 'Split field by seperator'
 
-**F=<Field>**
+### Action Type Values
+
+T=1  : 'Case conversion'
+T=2  : 'Replace'
+T=3  : Not listed in action types
+T=4  : 'Regular expression'
+T=5  : 'Format value'
+T=6  : 'Remove duplicate fields'
+T=7  : 'Guess values'
+T=8  : 'Merge duplicate fields'
+T=9  : 'Remove fields'
+T=10 : 'Remove fields except'
+T=11 : 'Convert codepage'
+T=12 : 'Import cover from file'
+T=13 : 'Export cover to file'
+T=14 : 'Import text file'
+T=15 : 'Export'
+T=16 : 'Split field by seperator'
+
+
+
+### File Template by Type
+
+
+
+#### T=1 'Case conversion'
+
+[https://help.mp3tag.de/options_format.html#case](https://help.mp3tag.de/options_format.html#case)
+
+```bash
+[#XXX] : Identifier and order indicator 
+T=1 : 'Case conversion' Type
+F= : Target (_ALL, _DIRECTORY, _FILENAME, _FIELDNAME, _TAGS AND FIELDS)
+1= : Case Convertion (lower case (4), Mixed Case (1), Sentence (8), Upper Case (2))
+2= : Word begin from/any of "xxx" or nothing
+```
+
+
+#### T=2 'Replace'
+
+[https://help.mp3tag.de/options_format.html#replace](https://help.mp3tag.de/options_format.html#replace)
+
+```bash
+[#XXX] : Identifier and order indicator 
+
+```
+
+
+#### T=3 Not listed in action types
 
 xxx
 
-**1=<Original String / regex>**
+```bash
+[#XXX] : Identifier and order indicator 
 
-xxx
+```
 
-**2=<Replace original string with>**
 
-xxx
+#### T=4 'Replace with regular expression'
 
-**3=<Field>**
+[https://help.mp3tag.de/options_format.html#regexp](https://help.mp3tag.de/options_format.html#regexp)
+
+```bash
+[#XXX] : Identifier and order indicator 
+T=4 : 'Replace with regular expression' Type
+F= : Target (_ALL, _DIRECTORY, _FILENAME, _TAGS AND FIELDS)
+1= : Regular Expression value
+2= : Replace matches with value
+3= : "Case-sensitive comparison" boolean value
+```
 
 3=0 Means 'only as whole word' and 'case-sensitive comparison' not selected
 3=1|0 Means 'only as whole word' selected and 'case-sensitive comparison' not selected
@@ -308,7 +353,26 @@ xxx
 3=1|1 Means 'only as whole word' selected and 'case-sensitive comparison' selected
 
 
+#### T=5 'Format value'
 
+[https://help.mp3tag.de/options_format.html#format](https://help.mp3tag.de/options_format.html#format)
+
+```bash
+[#XXX] : Identifier and order indicator 
+T=5 : 'Format value' Type
+1= : Format String (For example : %artist% - %title%)
+F= : Target (_DIRECTORY, _FILENAME)
+```
+
+#### T=10 'Remove fields except'
+
+[https://help.mp3tag.de/options_format.html#removeex](https://help.mp3tag.de/options_format.html#removeex)
+
+```bash
+[#XXX] : Identifier and order indicator 
+T=10
+F= : FIELDs
+```
 
 
 

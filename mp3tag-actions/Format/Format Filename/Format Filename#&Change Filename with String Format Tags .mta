@@ -1,0 +1,5 @@
+﻿[#0]
+! Converto String format to _FILENAME =
+T=5
+1=%artist% - %title%
+F=_FILENAME

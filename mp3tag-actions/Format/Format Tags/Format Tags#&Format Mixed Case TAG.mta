@@ -1,0 +1,7 @@
+﻿[#0]
+! Case Conversion Mixed Casse =
+! * Problem with _FILENAME -> Error change name
+T=1
+F=_TAG
+1=1
+2=

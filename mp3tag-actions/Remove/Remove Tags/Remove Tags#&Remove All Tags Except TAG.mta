@@ -1,0 +1,4 @@
+﻿[#0]
+! Remove fields except =
+T=10
+F=ALBUM;ARTIST
